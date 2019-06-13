@@ -118,6 +118,10 @@ bash install.sh
 docker build -t yourname/sharelist .
 
 docker run -d -v /etc/sharelist:/app/cache -p 33001:33001 --name="sharelist" yourname/sharelist
+
+Demo：
+docker run -d --name sharelist -p 33001:33001 -v /your/cache:sharelist/cache -e HOST=0.0.0.0 -e PORT=33001 oldiy/sharelist:latest
+
 ```
 
 OR
